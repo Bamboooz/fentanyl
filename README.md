@@ -6,10 +6,10 @@
 # Docs
 ## Recipes
 ### Syringe
-<img src="https://github.com/Bamboooz/fentanyl/blob/main/src/main/resources/assets/fentanyl/icon.png?raw=true" height="192" width="192" />
+<img src="https://github.com/Bamboooz/fentanyl/blob/main/src/main/resources/assets/fentanyl/docs/syringe.png?raw=true" height="192" width="192" />
 
 ### Poppy seeds
-<img src="https://github.com/Bamboooz/fentanyl/blob/main/src/main/resources/assets/fentanyl/icon.png?raw=true" height="192" width="192" />
+<img src="https://github.com/Bamboooz/fentanyl/blob/main/src/main/resources/assets/fentanyl/docs/poppy_seeds.png?raw=true" height="192" width="192" />
 
 ### Crushed poppy seeds
 Put the poppy seeds through create mod crushing wheels

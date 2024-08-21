@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "fentanyl",
+	"version": "${version}",
+	"name": "Create: Fentanyl",
+	"description": "Create: Fentanyl adds fent to create",
+	"authors": [
+		"Bamboooz"
+	],
+	"contact": {
+		"homepage": "https://github.com/Bamboooz/fentanyl"
+	},
+	"license": "MIT",
+	"icon": "assets/fentanyl/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.bamboooz.fentanyl.Fentanyl"
+		],
+		"client": [
+			"net.bamboooz.fentanyl.client.ModClient"
+		],
+		"fabric-datagen": [
+			"net.bamboooz.fentanyl.FentanylDataGenerator"
+		]
+	},
+	"mixins": [
+		"fentanyl.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"create": "0.5.1-f-build.1417+mc1.20.1",
+		"fabric-api": "*"
+	},
+	"suggests": {
+
+	}
+}

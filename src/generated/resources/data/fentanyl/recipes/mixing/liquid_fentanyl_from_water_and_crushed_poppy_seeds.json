@@ -1,0 +1,23 @@
+{
+  "type": "create:mixing",
+  "heatRequirement": "heated",
+  "ingredients": [
+    {
+      "item": "fentanyl:crushed_poppy_seeds"
+    },
+    {
+      "amount": 81000,
+      "fluid": "minecraft:water",
+      "nbt": {}
+    }
+  ],
+  "results": [
+    {
+      "item": "fentanyl:tar"
+    },
+    {
+      "amount": 27000,
+      "fluid": "fentanyl:fentanyl_still"
+    }
+  ]
+}

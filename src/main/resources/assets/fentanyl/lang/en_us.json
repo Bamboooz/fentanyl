@@ -1,0 +1,14 @@
+{
+  "itemgroup.fentanyl": "Create: Fentanyl",
+  "item.fentanyl.syringe": "Syringe",
+  "item.fentanyl.fentanyl_powder": "Fentanyl Powder",
+  "item.fentanyl.fentanyl_syringe": "Fentanyl Syringe",
+  "item.fentanyl.fentanyl_bucket": "Fentanyl Bucket",
+  "item.fentanyl.poppy_seeds":  "Poppy Seeds",
+  "item.fentanyl.crushed_poppy_seeds":  "Crushed Poppy Seeds",
+  "item.fentanyl.tar": "Tar",
+  "effect.fentanyl.fentanyl": "Fentanyl",
+  "death.attack.pricking_self": "%s pricked himself to death",
+  "death.attack.pricking_someone": "%s was pricked to death by %s",
+  "death.attack.fentanyl_od": "%s overdosed on fentanyl"
+}

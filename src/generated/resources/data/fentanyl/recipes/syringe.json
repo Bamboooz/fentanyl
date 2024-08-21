@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "g": {
+      "item": "minecraft:glass"
+    },
+    "i": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "i  ",
+    " g ",
+    "  g"
+  ],
+  "result": {
+    "item": "fentanyl:syringe"
+  },
+  "show_notification": true
+}

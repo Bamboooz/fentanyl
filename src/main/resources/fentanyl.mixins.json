@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "net.bamboooz.fentanyl.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "entity.EntityMixin",
+    "entity.LivingEntityMixin",
+    "food.FoodComponentMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+	}
+}

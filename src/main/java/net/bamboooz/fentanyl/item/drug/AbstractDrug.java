@@ -17,6 +17,8 @@ public abstract class AbstractDrug extends Item {
 
     public abstract int fentanylUnits();
 
+    public abstract void onUse(PlayerEntity user);
+
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack stack = user.getStackInHand(hand);
@@ -27,6 +29,8 @@ public abstract class AbstractDrug extends Item {
             world.playSound(null, user.getBlockPos(), ModSounds.SNORT, SoundCategory.NEUTRAL, 1f, 1f);
 
             FentanylManager.applyDrug(user, fentanylUnits());
+
+            onUse(user);
         }
 
         if (!user.getAbilities().creativeMode) {

@@ -8,6 +8,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.stat.Stats;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -24,6 +25,8 @@ public class FentanylSyringe extends AbstractSyringe {
 
     @Override
     public void onPrick(ItemStack stack, PlayerEntity user, LivingEntity entity) {
+        user.incrementStat(Stats.USED.getOrCreateStat(this));
+
         FentanylManager.applyDrug(entity, 12000);
 
         if (!user.getAbilities().creativeMode) {

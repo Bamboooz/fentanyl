@@ -3,12 +3,13 @@
 	"id": "fentanyl",
 	"version": "${version}",
 	"name": "Create: Fentanyl",
-	"description": "Create: Fentanyl adds fent to create",
+	"description": "Create: Fentanyl adds fent to Create",
 	"authors": [
 		"Bamboooz"
 	],
 	"contact": {
-		"homepage": "https://github.com/Bamboooz/fentanyl"
+		"issues": "https://github.com/Bamboooz/fentanyl/issues",
+		"sources": "https://github.com/Bamboooz/fentanyl"
 	},
 	"license": "MIT",
 	"icon": "assets/fentanyl/icon.png",
@@ -22,6 +23,15 @@
 		],
 		"fabric-datagen": [
 			"net.bamboooz.fentanyl.FentanylDataGenerator"
+		],
+		"emi": [
+			"net.bamboooz.fentanyl.compat.emi.FentanylEmiPlugin"
+		],
+		"rei_client": [
+			"net.bamboooz.fentanyl.compat.rei.FentanylReiClientPlugin"
+		],
+		"jei_mod_plugin": [
+			"net.bamboooz.fentanyl.compat.jei.FentanylJeiPlugin"
 		]
 	},
 	"mixins": [
@@ -33,8 +43,5 @@
 		"java": ">=17",
 		"create": "0.5.1-f-build.1417+mc1.20.1",
 		"fabric-api": "*"
-	},
-	"suggests": {
-
 	}
 }

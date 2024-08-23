@@ -25,6 +25,10 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Optional;
 
 public abstract class FentanylFluid extends FlowableFluid {
+    public FentanylFluid() {
+
+    }
+
     public Fluid getFlowing() {
         return ModFluids.FENTANYL_FLOWING;
     }

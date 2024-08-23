@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:fentanyl/root",
+  "criteria": {
+    "ingest_fentanyl_on_friday": {
+      "conditions": {
+        "effects": {
+          "fentanyl:fentanyl": {}
+        }
+      },
+      "trigger": "minecraft:effects_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/block/snow.png",
+    "description": {
+      "text": "Get freaky on a friday night"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "fentanyl:fent_friday"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Fent Friday"
+    }
+  },
+  "requirements": [
+    [
+      "ingest_fentanyl_on_friday"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

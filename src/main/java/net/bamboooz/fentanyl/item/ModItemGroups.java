@@ -20,6 +20,7 @@ public class ModItemGroups {
                         entries.add(ModItems.CRUSHED_POPPY_SEEDS);
                         entries.add(ModItems.TAR);
                         entries.add(ModItems.SYRINGE);
+                        entries.add(ModItems.BROKEN_SYRINGE);
                         entries.add(ModItems.FENTANYL_SYRINGE);
                         entries.add(ModItems.FENTANYL_POWDER);
                         entries.add(ModItems.FENTANYL_BUCKET);

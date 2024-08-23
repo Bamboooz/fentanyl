@@ -1,6 +1,7 @@
 package net.bamboooz.fentanyl.item.syringe;
 
-import net.bamboooz.fentanyl.entity.damage.ModDamageTypes;
+import net.bamboooz.fentanyl.damage.ModDamageTypes;
+import net.bamboooz.fentanyl.sound.ModSounds;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -8,6 +9,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
@@ -36,13 +38,22 @@ public abstract class AbstractSyringe extends Item {
         return canPlace && spaceFree;
     }
 
+    private void prick(World world, ItemStack stack, PlayerEntity user, LivingEntity entity) {
+        if (!world.isClient) {
+            world.playSound(null, entity.getBlockPos(), ModSounds.PRICK, SoundCategory.NEUTRAL, 1f, 1f);
+            entity.damage(ModDamageTypes.of(world, user, entity, ModDamageTypes.PRICKING), 1);
+
+            onPrick(stack, user, entity);
+        }
+    }
+
+
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack stack = user.getStackInHand(hand);
-
         BlockHitResult blockHitResult = raycast(world, user, RaycastContext.FluidHandling.SOURCE_ONLY);
 
-        if (blockHitResult.getType() != BlockHitResult.Type.MISS) {
+        if (blockHitResult.getType() != BlockHitResult.Type.MISS && syringeBlock() != null) {
             if (blockHitResult.getType() == BlockHitResult.Type.BLOCK) {
                 BlockPos blockPos = blockHitResult.getBlockPos();
 
@@ -53,14 +64,11 @@ public abstract class AbstractSyringe extends Item {
                 return useOnBlockOrFluid(stack, world, user, blockPos);
             }
         } else {
-            if (!world.isClient) {
-                user.getItemCooldownManager().set(this, 10);
+            user.getItemCooldownManager().set(this, 20);
 
-                user.damage(ModDamageTypes.of(world, ModDamageTypes.PRICKING_SELF), 1);
-                onPrick(stack, user, user);
+            prick(world, stack, user, user);
 
-                return TypedActionResult.success(stack, world.isClient());
-            }
+            return TypedActionResult.success(stack, world.isClient());
         }
 
         return TypedActionResult.pass(stack);
@@ -90,14 +98,11 @@ public abstract class AbstractSyringe extends Item {
 
     @Override
     public ActionResult useOnEntity(ItemStack stack, PlayerEntity user, LivingEntity entity, Hand hand) {
-        user.getItemCooldownManager().set(this, 10);
+        user.getItemCooldownManager().set(this, 20);
 
         World world = user.getWorld();
 
-        if (!world.isClient) {
-            entity.damage(ModDamageTypes.of(world, user, entity, ModDamageTypes.PRICKING_SOMEONE), 1);
-            onPrick(stack, user, entity);
-        }
+        prick(world, stack, user, entity);
 
         return ActionResult.SUCCESS;
     }

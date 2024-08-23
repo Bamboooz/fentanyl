@@ -1,17 +1,16 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "key": {
-    "p": {
+  "ingredients": [
+    {
+      "item": "minecraft:poppy"
+    },
+    {
       "item": "minecraft:poppy"
     }
-  },
-  "pattern": [
-    " p",
-    "p "
   ],
   "result": {
+    "count": 2,
     "item": "fentanyl:poppy_seeds"
-  },
-  "show_notification": true
+  }
 }

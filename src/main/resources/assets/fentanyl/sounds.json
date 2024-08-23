@@ -1,0 +1,20 @@
+{
+  "prick": {
+    "subtitle": "sounds.fentanyl.prick",
+    "sounds": [
+      "fentanyl:prick"
+    ]
+  },
+  "snort": {
+    "subtitle": "sounds.fentanyl.snort",
+    "sounds": [
+      "fentanyl:snort"
+    ]
+  },
+  "mandeville": {
+    "subtitle": "sounds.fentanyl.mandeville",
+    "sounds": [
+      "fentanyl:mandeville"
+    ]
+  }
+}

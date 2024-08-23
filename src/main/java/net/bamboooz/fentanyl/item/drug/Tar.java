@@ -1,12 +1,12 @@
 package net.bamboooz.fentanyl.item.drug;
 
-public class FentanylPowder extends AbstractDrug {
-    public FentanylPowder(Settings settings) {
+public class Tar extends AbstractDrug{
+    public Tar(Settings settings) {
         super(settings);
     }
 
     @Override
     public int fentanylUnits() {
-        return 24000;
+        return 1200;
     }
 }

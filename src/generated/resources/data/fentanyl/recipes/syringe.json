@@ -10,9 +10,9 @@
     }
   },
   "pattern": [
-    "i  ",
+    "  i",
     " g ",
-    "  g"
+    "g  "
   ],
   "result": {
     "item": "fentanyl:syringe"

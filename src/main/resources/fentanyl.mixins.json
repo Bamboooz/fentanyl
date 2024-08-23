@@ -3,11 +3,13 @@
   "package": "net.bamboooz.fentanyl.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "entity.EntityMixin",
-    "entity.LivingEntityMixin",
-    "food.FoodComponentMixin"
+    "entity.PlayerEntityMixin",
+    "entity.ServerPlayerEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1
-	}
+  },
+  "client": [
+    "model.BipedEntityModelMixin"
+  ]
 }

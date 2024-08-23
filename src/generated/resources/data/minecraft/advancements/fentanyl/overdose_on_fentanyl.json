@@ -1,0 +1,39 @@
+{
+  "parent": "minecraft:fentanyl/root",
+  "criteria": {
+    "overdose_on_fentanyl": {
+      "conditions": {
+        "effects": {
+          "fentanyl:fentanyl": {
+            "amplifier": {
+              "min": 2
+            }
+          }
+        }
+      },
+      "trigger": "minecraft:effects_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/block/snow.png",
+    "description": {
+      "text": "Overdose on fentanyl"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "fentanyl:fent_overdose"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "I saw him fent"
+    }
+  },
+  "requirements": [
+    [
+      "overdose_on_fentanyl"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

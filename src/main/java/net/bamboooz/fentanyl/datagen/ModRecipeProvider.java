@@ -1,6 +1,5 @@
 package net.bamboooz.fentanyl.datagen;
 
-import com.simibubi.create.content.processing.recipe.ProcessingRecipeBuilder;
 import net.bamboooz.fentanyl.Fentanyl;
 import net.bamboooz.fentanyl.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -31,12 +30,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.GLASS), conditionsFromItem(Items.GLASS))
                 .offerTo(exporter, Identifier.of(Fentanyl.MOD_ID, getRecipeName(ModItems.SYRINGE)));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.POPPY_SEEDS, 1)
-                .pattern(" p")
-                .pattern("p ")
-                .input('p', Items.POPPY)
-                .criterion(hasItem(Items.POPPY), conditionsFromItem(Items.POPPY))
-                .offerTo(exporter, Identifier.of(Fentanyl.MOD_ID, getRecipeName(ModItems.POPPY_SEEDS)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.FENTANYL_BUCKET, 1)
                 .input(Items.WATER_BUCKET)
@@ -44,5 +37,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.WATER_BUCKET), conditionsFromItem(Items.WATER_BUCKET))
                 .criterion(hasItem(ModItems.FENTANYL_POWDER), conditionsFromItem(ModItems.FENTANYL_POWDER))
                 .offerTo(exporter, Identifier.of(Fentanyl.MOD_ID, getRecipeName(ModItems.FENTANYL_BUCKET)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.POPPY_SEEDS, 2)
+                .input(Items.POPPY)
+                .input(Items.POPPY)
+                .criterion(hasItem(Items.POPPY), conditionsFromItem(Items.POPPY))
+                .offerTo(exporter, Identifier.of(Fentanyl.MOD_ID, getRecipeName(ModItems.POPPY_SEEDS)));
     }
 }

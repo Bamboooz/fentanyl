@@ -1,5 +1,6 @@
 package net.bamboooz.fentanyl.util;
 
+import net.bamboooz.fentanyl.Fentanyl;
 import net.bamboooz.fentanyl.item.ModItems;
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.minecraft.block.Blocks;
@@ -29,5 +30,7 @@ public class ModifyLootTables {
                 tableBuilder.pool(poolBuilder);
             }
         });
+
+        Fentanyl.LOGGER.info("Modifying loot tables for " + Fentanyl.MOD_ID);
     }
 }

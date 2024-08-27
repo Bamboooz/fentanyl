@@ -16,6 +16,8 @@
   "block.fentanyl.fentanyl_fluid_block": "Liquid Fentanyl",
   "block.fentanyl.naloxone_fluid_block": "Liquid Naloxone",
 
+  "entity.minecraft.villager.fiend": "Fiend",
+
   "effect.fentanyl.fentanyl": "Fentanyl",
 
   "sounds.fentanyl.prick": "Syringe Prick",

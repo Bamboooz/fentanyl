@@ -58,17 +58,20 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
 
         Advancement.Builder.create().parent(fentanylAdvancement)
                 .display(
-                        ModItems.NALOXONE_SYRINGE,
-                        Text.literal("Party Pooper"),
-                        Text.literal("Inject someones ass with naloxone"),
+                        ModItems.ADVANCEMENT_FENT_FRIDAY,
+                        Text.literal("Fent Friday"),
+                        Text.literal("Get fentanyl into your system"),
                         Identifier.of(Fentanyl.MOD_ID, "textures/gui/advancements.png"),
                         AdvancementFrame.TASK,
                         true,
                         true,
                         false
                 )
-                .criterion("use_naloxone", new ImpossibleCriterion.Conditions())
-                .build(consumer, Fentanyl.MOD_ID + "/use_naloxone");
+                .criterion("ingest_fentanyl", EffectsChangedCriterion.Conditions.create(
+                        EntityEffectPredicate.create()
+                                .withEffect(ModEffects.FENTANYL)
+                ))
+                .build(consumer, Fentanyl.MOD_ID + "/ingest_fentanyl");
 
         Advancement.Builder.create().parent(fentanylAdvancement)
                 .display(
@@ -89,19 +92,16 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
 
         Advancement.Builder.create().parent(fentanylAdvancement)
                 .display(
-                        ModItems.ADVANCEMENT_FENT_FRIDAY,
-                        Text.literal("Fent Friday"),
-                        Text.literal("Get fentanyl into your system"),
+                        ModItems.NALOXONE_SYRINGE,
+                        Text.literal("Party Pooper"),
+                        Text.literal("Inject someones ass with naloxone"),
                         Identifier.of(Fentanyl.MOD_ID, "textures/gui/advancements.png"),
-                        AdvancementFrame.GOAL,
+                        AdvancementFrame.TASK,
                         true,
                         true,
                         false
                 )
-                .criterion("ingest_fentanyl", EffectsChangedCriterion.Conditions.create(
-                        EntityEffectPredicate.create()
-                                .withEffect(ModEffects.FENTANYL)
-                ))
-                .build(consumer, Fentanyl.MOD_ID + "/ingest_fentanyl");
+                .criterion("use_naloxone", new ImpossibleCriterion.Conditions())
+                .build(consumer, Fentanyl.MOD_ID + "/use_naloxone");
     }
 }

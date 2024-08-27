@@ -1,4 +1,4 @@
-package net.bamboooz.fentanyl.damage;
+package net.bamboooz.fentanyl.entity.damage;
 
 import net.bamboooz.fentanyl.Fentanyl;
 import net.minecraft.entity.Entity;

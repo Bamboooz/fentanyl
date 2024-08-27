@@ -17,7 +17,6 @@ public class MixingRecipeProvider extends ProcessingRecipeGen {
                 .require(Fluids.WATER, FluidConstants.BUCKET)
                 .require(ModItems.CRUSHED_POPPY_SEEDS)
                 .output(ModFluids.FENTANYL_STILL, FluidConstants.BOTTLE)
-                .output(ModFluids.NALOXONE_STILL, FluidConstants.BOTTLE / 4)
                 .output(ModItems.TAR)
                 .requiresHeat(HeatCondition.HEATED)),
 
@@ -30,6 +29,11 @@ public class MixingRecipeProvider extends ProcessingRecipeGen {
                 .require(ModFluids.FENTANYL_STILL, FluidConstants.BUCKET)
                 .require(ModItems.SYRINGE)
                 .output(ModItems.FENTANYL_SYRINGE)),
+
+            LIQUID_NALOXONE = create(Identifier.tryParse("liquid_naloxone"), b -> b
+                .require(ModFluids.FENTANYL_STILL, FluidConstants.BUCKET)
+                .output(ModFluids.NALOXONE_STILL, FluidConstants.BOTTLE)
+                .requiresHeat(HeatCondition.SUPERHEATED)),
 
             NALOXONE_SYRINGE = create(Identifier.tryParse("naloxone_syringe"), b -> b
                 .require(ModFluids.NALOXONE_STILL, FluidConstants.BUCKET)

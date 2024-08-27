@@ -1,0 +1,17 @@
+{
+  "type": "create:mixing",
+  "heatRequirement": "superheated",
+  "ingredients": [
+    {
+      "amount": 81000,
+      "fluid": "fentanyl:fentanyl_still",
+      "nbt": {}
+    }
+  ],
+  "results": [
+    {
+      "amount": 27000,
+      "fluid": "fentanyl:naloxone_still"
+    }
+  ]
+}

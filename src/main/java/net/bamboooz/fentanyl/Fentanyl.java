@@ -2,9 +2,11 @@ package net.bamboooz.fentanyl;
 
 import net.bamboooz.fentanyl.block.ModBlocks;
 import net.bamboooz.fentanyl.effect.ModEffects;
-import net.bamboooz.fentanyl.damage.ModDamageTypes;
+import net.bamboooz.fentanyl.entity.damage.ModDamageTypes;
+import net.bamboooz.fentanyl.entity.villager.ModVillagers;
 import net.bamboooz.fentanyl.fluid.ModFluids;
 import net.bamboooz.fentanyl.item.ModItemGroups;
+import net.bamboooz.fentanyl.entity.villager.ModCustomTrades;
 import net.bamboooz.fentanyl.util.ModTags;
 import net.bamboooz.fentanyl.item.ModItems;
 import net.bamboooz.fentanyl.sound.ModSounds;
@@ -32,5 +34,8 @@ public class Fentanyl implements ModInitializer {
 		ModSounds.registerSounds();
 
 		ModifyLootTables.modifyLootTables();
+
+		ModVillagers.registerVillagers();
+		ModCustomTrades.registerCustomTrades();
 	}
 }

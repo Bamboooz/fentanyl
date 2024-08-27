@@ -18,10 +18,6 @@
     {
       "amount": 27000,
       "fluid": "fentanyl:fentanyl_still"
-    },
-    {
-      "amount": 3375,
-      "fluid": "fentanyl:naloxone_still"
     }
   ]
 }

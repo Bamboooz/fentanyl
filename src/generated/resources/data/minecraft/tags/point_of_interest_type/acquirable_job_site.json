@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "fentanyl:fiend_poi",
+      "required": false
+    }
+  ]
+}

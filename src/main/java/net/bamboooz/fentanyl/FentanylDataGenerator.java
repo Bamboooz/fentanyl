@@ -1,6 +1,7 @@
 package net.bamboooz.fentanyl;
 
 import net.bamboooz.fentanyl.datagen.ModAdvancementProvider;
+import net.bamboooz.fentanyl.datagen.ModPoiTagProvider;
 import net.bamboooz.fentanyl.datagen.create.CrushingRecipeProvider;
 import net.bamboooz.fentanyl.datagen.create.MillingRecipeProvider;
 import net.bamboooz.fentanyl.datagen.create.MixingRecipeProvider;
@@ -18,6 +19,7 @@ public class FentanylDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModModelProvider::new);
 		pack.addProvider(ModRecipeProvider::new);
 		pack.addProvider(ModAdvancementProvider::new);
+		pack.addProvider(ModPoiTagProvider::new);
 		pack.addProvider(MixingRecipeProvider::new);
 		pack.addProvider(CrushingRecipeProvider::new);
 		pack.addProvider(MillingRecipeProvider::new);

@@ -1,6 +1,6 @@
 package net.bamboooz.fentanyl.block.syringe;
 
-import net.bamboooz.fentanyl.damage.ModDamageTypes;
+import net.bamboooz.fentanyl.entity.damage.ModDamageTypes;
 import net.bamboooz.fentanyl.item.ModItems;
 import net.bamboooz.fentanyl.sound.ModSounds;
 import net.minecraft.block.*;

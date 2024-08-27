@@ -1,6 +1,6 @@
 package net.bamboooz.fentanyl.item.syringe;
 
-import net.bamboooz.fentanyl.damage.ModDamageTypes;
+import net.bamboooz.fentanyl.entity.damage.ModDamageTypes;
 import net.bamboooz.fentanyl.sound.ModSounds;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -45,7 +45,7 @@ public abstract class AbstractSyringe extends Item {
 
         world.playSound(null, entity.getBlockPos(), ModSounds.PRICK, SoundCategory.NEUTRAL, 1f, 1f);
 
-        entity.damage(ModDamageTypes.of(world, user, null, ModDamageTypes.PRICKING), 1);
+        entity.damage(ModDamageTypes.of(world, null, null, ModDamageTypes.PRICKING), 1);
 
         onPrick(stack, user, entity);
     }

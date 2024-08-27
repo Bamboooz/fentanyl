@@ -1,6 +1,6 @@
 package net.bamboooz.fentanyl.effect.drug;
 
-import net.bamboooz.fentanyl.damage.ModDamageTypes;
+import net.bamboooz.fentanyl.entity.damage.ModDamageTypes;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;

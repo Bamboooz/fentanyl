@@ -13,14 +13,6 @@ public class ModDamageTypes {
     public static final RegistryKey<DamageType> PRICKING = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, Identifier.of(Fentanyl.MOD_ID, "pricking"));
     public static final RegistryKey<DamageType> FENTANYL_OD = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, Identifier.of(Fentanyl.MOD_ID, "fentanyl_od"));
 
-    /*
-    * Death messages
-    * %s pricked himself to death
-    * %s was pricked to death by %s
-    * %s overdosed on fentanyl
-    * %s overdosed on fentanyl after being pricked by %s
-    * */
-
     public static DamageSource of(World world, RegistryKey<DamageType> damageType) {
         return new DamageSource(
                 world.getRegistryManager()

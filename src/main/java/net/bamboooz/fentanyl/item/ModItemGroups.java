@@ -23,7 +23,10 @@ public class ModItemGroups {
                         entries.add(ModItems.BROKEN_SYRINGE);
                         entries.add(ModItems.FENTANYL_SYRINGE);
                         entries.add(ModItems.FENTANYL_POWDER);
+                        entries.add(ModItems.FENTANYL_PILLS);
                         entries.add(ModItems.FENTANYL_BUCKET);
+                        entries.add(ModItems.NALOXONE_SYRINGE);
+                        entries.add(ModItems.NALOXONE_BUCKET);
                     }).build()
     );
 

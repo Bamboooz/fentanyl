@@ -39,31 +39,23 @@ public abstract class AbstractSyringe extends Item {
     }
 
     private void prick(World world, ItemStack stack, PlayerEntity user, LivingEntity entity) {
-        if (!world.isClient) {
-            world.playSound(null, entity.getBlockPos(), ModSounds.PRICK, SoundCategory.NEUTRAL, 1f, 1f);
-            entity.damage(ModDamageTypes.of(world, user, entity, ModDamageTypes.PRICKING), 1);
-
-            onPrick(stack, user, entity);
+        if (world.isClient) {
+            return;
         }
-    }
 
+        world.playSound(null, entity.getBlockPos(), ModSounds.PRICK, SoundCategory.NEUTRAL, 1f, 1f);
+
+        entity.damage(ModDamageTypes.of(world, user, null, ModDamageTypes.PRICKING), 1);
+
+        onPrick(stack, user, entity);
+    }
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack stack = user.getStackInHand(hand);
         BlockHitResult blockHitResult = raycast(world, user, RaycastContext.FluidHandling.SOURCE_ONLY);
 
-        if (blockHitResult.getType() != BlockHitResult.Type.MISS && syringeBlock() != null) {
-            if (blockHitResult.getType() == BlockHitResult.Type.BLOCK) {
-                BlockPos blockPos = blockHitResult.getBlockPos();
-
-                if (!world.canPlayerModifyAt(user, blockPos)) {
-                    return TypedActionResult.pass(stack);
-                }
-
-                return useOnBlockOrFluid(stack, world, user, blockPos);
-            }
-        } else {
+        if (blockHitResult.getType() == BlockHitResult.Type.MISS || syringeBlock() == null) {
             user.getItemCooldownManager().set(this, 20);
 
             prick(world, stack, user, user);
@@ -71,7 +63,17 @@ public abstract class AbstractSyringe extends Item {
             return TypedActionResult.success(stack, world.isClient());
         }
 
-        return TypedActionResult.pass(stack);
+        if (blockHitResult.getType() != BlockHitResult.Type.BLOCK) {
+            return TypedActionResult.pass(stack);
+        }
+
+        BlockPos blockPos = blockHitResult.getBlockPos();
+
+        if (!world.canPlayerModifyAt(user, blockPos)) {
+            return TypedActionResult.pass(stack);
+        }
+
+        return useOnBlockOrFluid(stack, world, user, blockPos);
     }
 
     private TypedActionResult<ItemStack> useOnBlockOrFluid(ItemStack stack, World world, PlayerEntity user, BlockPos pos) {

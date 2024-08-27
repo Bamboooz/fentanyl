@@ -1,7 +1,7 @@
 {
-  "parent": "minecraft:fentanyl/root",
+  "parent": "minecraft:fentanyl/obtain_fentanyl",
   "criteria": {
-    "ingest_fentanyl_on_friday": {
+    "ingest_fentanyl": {
       "conditions": {
         "effects": {
           "fentanyl:fentanyl": {}
@@ -12,14 +12,14 @@
   },
   "display": {
     "announce_to_chat": true,
-    "background": "minecraft:textures/block/snow.png",
+    "background": "fentanyl:textures/gui/advancements.png",
     "description": {
-      "text": "Get freaky on a friday night"
+      "text": "Get fentanyl into your system"
     },
-    "frame": "challenge",
+    "frame": "goal",
     "hidden": false,
     "icon": {
-      "item": "fentanyl:fent_friday"
+      "item": "fentanyl:advancement_fent_friday"
     },
     "show_toast": true,
     "title": {
@@ -28,7 +28,7 @@
   },
   "requirements": [
     [
-      "ingest_fentanyl_on_friday"
+      "ingest_fentanyl"
     ]
   ],
   "sends_telemetry_event": true

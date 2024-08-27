@@ -7,6 +7,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
@@ -29,14 +30,23 @@ public class Syringe extends AbstractSyringe {
 
     @Override
     public TypedActionResult<ItemStack> useOnFluid(World world, BlockState state, BlockPos pos, PlayerEntity user, ItemStack stack) {
-        if (state.getBlock() == ModBlocks.FENTANYL_FLUID_BLOCK) {
-            world.setBlockState(pos, Blocks.AIR.getDefaultState());
-            stack.decrement(1);
-            user.giveItemStack(ModItems.FENTANYL_SYRINGE.getDefaultStack());
+        boolean isFentanyl = state.getBlock() == ModBlocks.FENTANYL_FLUID_BLOCK;
+        boolean isNaloxone = state.getBlock() == ModBlocks.NALOXONE_FLUID_BLOCK;
 
-            return TypedActionResult.success(stack, world.isClient());
+        if (!isFentanyl && !isNaloxone) {
+            return TypedActionResult.pass(stack);
         }
 
-        return TypedActionResult.pass(stack);
+        world.setBlockState(pos, Blocks.AIR.getDefaultState());
+
+        if (!user.getAbilities().creativeMode) {
+            stack.decrement(1);
+        }
+
+        Item item = isFentanyl ? ModItems.FENTANYL_SYRINGE : ModItems.NALOXONE_SYRINGE;
+
+        user.giveItemStack(item.getDefaultStack());
+
+        return TypedActionResult.success(stack, world.isClient());
     }
 }

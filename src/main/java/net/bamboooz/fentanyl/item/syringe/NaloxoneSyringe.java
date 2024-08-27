@@ -13,21 +13,21 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class FentanylSyringe extends AbstractSyringe {
-    public FentanylSyringe(Settings settings) {
+public class NaloxoneSyringe extends AbstractSyringe {
+    public NaloxoneSyringe(Settings settings) {
         super(settings);
     }
 
     @Override
     public Block syringeBlock() {
-        return ModBlocks.FENTANYL_SYRINGE_BLOCK;
+        return ModBlocks.NALOXONE_SYRINGE_BLOCK;
     }
 
     @Override
     public void onPrick(ItemStack stack, PlayerEntity user, LivingEntity entity) {
         user.incrementStat(Stats.USED.getOrCreateStat(this));
 
-        FentanylManager.applyDrug(entity, 12000);
+        FentanylManager.removeFentanyl(entity);
 
         if (!user.getAbilities().creativeMode) {
             stack.decrement(1);

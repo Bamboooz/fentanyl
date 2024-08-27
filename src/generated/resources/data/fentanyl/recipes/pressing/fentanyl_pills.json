@@ -1,0 +1,13 @@
+{
+  "type": "create:pressing",
+  "ingredients": [
+    {
+      "item": "fentanyl:fentanyl_powder"
+    }
+  ],
+  "results": [
+    {
+      "item": "fentanyl:fentanyl_pills"
+    }
+  ]
+}

@@ -17,20 +17,30 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSimpleState(ModBlocks.SYRINGE_BLOCK);
         blockStateModelGenerator.registerSimpleState(ModBlocks.FENTANYL_SYRINGE_BLOCK);
+        blockStateModelGenerator.registerSimpleState(ModBlocks.NALOXONE_SYRINGE_BLOCK);
+
         blockStateModelGenerator.registerSimpleState(ModBlocks.FENTANYL_FLUID_BLOCK);
+        blockStateModelGenerator.registerSimpleState(ModBlocks.NALOXONE_FLUID_BLOCK);
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.SYRINGE, Models.GENERATED);
         itemModelGenerator.register(ModItems.BROKEN_SYRINGE, Models.GENERATED);
+
         itemModelGenerator.register(ModItems.FENTANYL_POWDER, Models.GENERATED);
         itemModelGenerator.register(ModItems.FENTANYL_SYRINGE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.FENTANYL_PILLS, Models.GENERATED);
         itemModelGenerator.register(ModItems.FENTANYL_BUCKET, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.NALOXONE_SYRINGE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.NALOXONE_BUCKET, Models.GENERATED);
+
         itemModelGenerator.register(ModItems.POPPY_SEEDS, Models.GENERATED);
         itemModelGenerator.register(ModItems.CRUSHED_POPPY_SEEDS, Models.GENERATED);
         itemModelGenerator.register(ModItems.TAR, Models.GENERATED);
-        itemModelGenerator.register(ModItems.FENT_FRIDAY, Models.GENERATED);
-        itemModelGenerator.register(ModItems.FENT_OVERDOSE, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.ADVANCEMENT_FENT_FRIDAY, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ADVANCEMENT_FENT_OVERDOSE, Models.GENERATED);
     }
 }

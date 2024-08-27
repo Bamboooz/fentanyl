@@ -5,10 +5,16 @@
   "item.fentanyl.broken_syringe": "Broken Syringe",
   "item.fentanyl.fentanyl_powder": "Fentanyl Powder",
   "item.fentanyl.fentanyl_syringe": "Fentanyl Syringe",
+  "item.fentanyl.fentanyl_pills": "Fentanyl Pills",
   "item.fentanyl.fentanyl_bucket": "Fentanyl Bucket",
+  "item.fentanyl.naloxone_syringe": "Naloxone Syringe",
+  "item.fentanyl.naloxone_bucket": "Naloxone Bucket",
   "item.fentanyl.poppy_seeds":  "Poppy Seeds",
   "item.fentanyl.crushed_poppy_seeds":  "Crushed Poppy Seeds",
   "item.fentanyl.tar": "Tar",
+
+  "block.fentanyl.fentanyl_fluid_block": "Liquid Fentanyl",
+  "block.fentanyl.naloxone_fluid_block": "Liquid Naloxone",
 
   "effect.fentanyl.fentanyl": "Fentanyl",
 
@@ -18,6 +24,5 @@
 
   "death.attack.pricking": "%1$s pricked himself to death",
   "death.attack.pricking.player": "%1$s was pricked to death by %2$s",
-  "death.attack.fentanyl_od": "%1$s overdosed on fentanyl",
-  "death.attack.fentanyl_od.player": "%1$s overdosed on fentanyl after being pricked by %2$s"
+  "death.attack.fentanyl_od": "%1$s overdosed on fentanyl"
 }

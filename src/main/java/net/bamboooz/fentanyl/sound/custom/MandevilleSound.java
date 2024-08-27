@@ -5,8 +5,8 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.math.random.Random;
 
-public class FentanylSound extends MovingSoundInstance {
-    public FentanylSound(SoundEvent soundEvent, SoundCategory soundCategory, Random random) {
+public class MandevilleSound extends MovingSoundInstance {
+    public MandevilleSound(SoundEvent soundEvent, SoundCategory soundCategory, Random random) {
         super(soundEvent, soundCategory, random);
     }
 

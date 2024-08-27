@@ -1,33 +1,36 @@
 {
+  "parent": "minecraft:fentanyl/root",
   "criteria": {
-    "always": {
+    "obtain_fentanyl": {
       "conditions": {
         "items": [
-          null
+          {
+            "tag": "fentanyl:fentanyl"
+          }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     }
   },
   "display": {
-    "announce_to_chat": false,
+    "announce_to_chat": true,
     "background": "fentanyl:textures/gui/advancements.png",
     "description": {
-      "text": "Let there be fent"
+      "text": "Obtain fentanyl in any form for the first time"
     },
     "frame": "task",
-    "hidden": true,
+    "hidden": false,
     "icon": {
-      "item": "fentanyl:fentanyl_powder"
+      "item": "fentanyl:fentanyl_syringe"
     },
-    "show_toast": false,
+    "show_toast": true,
     "title": {
-      "text": "Create: Fentanyl"
+      "text": "Fentanyl"
     }
   },
   "requirements": [
     [
-      "always"
+      "obtain_fentanyl"
     ]
   ],
   "sends_telemetry_event": true

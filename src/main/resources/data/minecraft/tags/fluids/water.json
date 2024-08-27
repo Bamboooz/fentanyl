@@ -2,6 +2,8 @@
   "values": [
     "fentanyl:fentanyl_still",
     "fentanyl:fentanyl_flowing",
+    "fentanyl:naloxone_still",
+    "fentanyl:naloxone_flowing",
     "minecraft:water",
     "minecraft:flowing_water"
   ]

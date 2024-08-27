@@ -1,0 +1,18 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "fentanyl:syringe"
+    },
+    {
+      "amount": 81000,
+      "fluid": "fentanyl:naloxone_still",
+      "nbt": {}
+    }
+  ],
+  "results": [
+    {
+      "item": "fentanyl:naloxone_syringe"
+    }
+  ]
+}

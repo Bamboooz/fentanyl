@@ -2,6 +2,7 @@ package net.bamboooz.fentanyl.block;
 
 import net.bamboooz.fentanyl.Fentanyl;
 import net.bamboooz.fentanyl.block.syringe.FentanylSyringeBlock;
+import net.bamboooz.fentanyl.block.syringe.NaloxoneSyringeBlock;
 import net.bamboooz.fentanyl.block.syringe.SyringeBlock;
 import net.bamboooz.fentanyl.fluid.ModFluids;
 import net.bamboooz.fentanyl.item.ModItems;
@@ -21,9 +22,14 @@ public class ModBlocks {
             new SyringeBlock(FabricBlockSettings.copyOf(Blocks.GLASS).sounds(BlockSoundGroup.GLASS).nonOpaque()));
     public static final Block FENTANYL_SYRINGE_BLOCK = registerBlock("fentanyl_syringe_block",
             new FentanylSyringeBlock(FabricBlockSettings.copyOf(Blocks.GLASS).sounds(BlockSoundGroup.GLASS).nonOpaque()));
+    public static final Block NALOXONE_SYRINGE_BLOCK = registerBlock("naloxone_syringe_block",
+            new NaloxoneSyringeBlock(FabricBlockSettings.copyOf(Blocks.GLASS).sounds(BlockSoundGroup.GLASS).nonOpaque()));
 
     public static final Block FENTANYL_FLUID_BLOCK = registerBlockWithoutBlockItem("fentanyl_fluid_block",
             new FluidBlock(ModFluids.FENTANYL_STILL, FabricBlockSettings.copyOf(Blocks.WATER)
+                    .noCollision().nonOpaque().dropsNothing()));
+    public static final Block NALOXONE_FLUID_BLOCK = registerBlockWithoutBlockItem("naloxone_fluid_block",
+            new FluidBlock(ModFluids.NALOXONE_STILL, FabricBlockSettings.copyOf(Blocks.WATER)
                     .noCollision().nonOpaque().dropsNothing()));
 
     private static Block registerBlock(String name, Block block) {

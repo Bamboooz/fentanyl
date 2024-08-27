@@ -13,10 +13,14 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class ServerPlayerEntityMixin {
     @Inject(method = "onBlockCollision", at = @At("HEAD"))
     protected void onBlockCollision(BlockState state, CallbackInfo ci) {
-        if (state.getBlock() == ModBlocks.FENTANYL_FLUID_BLOCK) {
-            ServerPlayerEntity entity = (ServerPlayerEntity) (Object) this;
+        ServerPlayerEntity entity = (ServerPlayerEntity) (Object) this;
 
-            FentanylManager.applyDrug(entity, 1200);
+        if (state.getBlock() == ModBlocks.FENTANYL_FLUID_BLOCK) {
+            FentanylManager.applyDrug(entity, 400);
+        }
+
+        if (state.getBlock() == ModBlocks.NALOXONE_FLUID_BLOCK) {
+            FentanylManager.removeFentanyl(entity);
         }
     }
 }

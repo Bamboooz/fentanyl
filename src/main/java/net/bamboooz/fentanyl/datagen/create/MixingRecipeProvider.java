@@ -13,22 +13,28 @@ import net.minecraft.util.Identifier;
 
 public class MixingRecipeProvider extends ProcessingRecipeGen {
     GeneratedRecipe
-            LIQUID_FENTANYL = create(Identifier.tryParse("liquid_fentanyl_from_water_and_crushed_poppy_seeds"), b -> b
+            LIQUID_FENTANYL = create(Identifier.tryParse("liquid_fentanyl"), b -> b
                 .require(Fluids.WATER, FluidConstants.BUCKET)
                 .require(ModItems.CRUSHED_POPPY_SEEDS)
                 .output(ModFluids.FENTANYL_STILL, FluidConstants.BOTTLE)
+                .output(ModFluids.NALOXONE_STILL, FluidConstants.BOTTLE / 4)
                 .output(ModItems.TAR)
                 .requiresHeat(HeatCondition.HEATED)),
 
-            FENTANYL_POWDER = create(Identifier.tryParse("fentanyl_powder_from_liquid_fentanyl"), b -> b
+            FENTANYL_POWDER = create(Identifier.tryParse("fentanyl_powder"), b -> b
                 .require(ModFluids.FENTANYL_STILL, FluidConstants.BUCKET)
                 .output(ModItems.FENTANYL_POWDER)
                 .requiresHeat(HeatCondition.SUPERHEATED)),
 
-            FENTANYL_SYRINGE = create(Identifier.tryParse("fentanyl_syringe_from_liquid_fentanyl_and_syringe"), b -> b
+            FENTANYL_SYRINGE = create(Identifier.tryParse("fentanyl_syringe"), b -> b
                 .require(ModFluids.FENTANYL_STILL, FluidConstants.BUCKET)
                 .require(ModItems.SYRINGE)
-                .output(ModItems.FENTANYL_SYRINGE));
+                .output(ModItems.FENTANYL_SYRINGE)),
+
+            NALOXONE_SYRINGE = create(Identifier.tryParse("naloxone_syringe"), b -> b
+                .require(ModFluids.NALOXONE_STILL, FluidConstants.BUCKET)
+                .require(ModItems.SYRINGE)
+                .output(ModItems.NALOXONE_SYRINGE));
 
     public MixingRecipeProvider(FabricDataOutput generator) {
         super(generator);

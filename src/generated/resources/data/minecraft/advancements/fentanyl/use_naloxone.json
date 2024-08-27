@@ -1,38 +1,29 @@
 {
   "parent": "minecraft:fentanyl/obtain_fentanyl",
   "criteria": {
-    "overdose_on_fentanyl": {
-      "conditions": {
-        "effects": {
-          "fentanyl:fentanyl": {
-            "amplifier": {
-              "min": 2
-            }
-          }
-        }
-      },
-      "trigger": "minecraft:effects_changed"
+    "use_naloxone": {
+      "trigger": "minecraft:impossible"
     }
   },
   "display": {
     "announce_to_chat": true,
     "background": "fentanyl:textures/gui/advancements.png",
     "description": {
-      "text": "Overdose on fentanyl"
+      "text": "Inject someones ass with naloxone"
     },
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "fentanyl:advancement_fent_overdose"
+      "item": "fentanyl:naloxone_syringe"
     },
     "show_toast": true,
     "title": {
-      "text": "I saw him fent"
+      "text": "Party Pooper"
     }
   },
   "requirements": [
     [
-      "overdose_on_fentanyl"
+      "use_naloxone"
     ]
   ],
   "sends_telemetry_event": true

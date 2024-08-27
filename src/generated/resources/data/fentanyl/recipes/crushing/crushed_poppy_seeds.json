@@ -1,0 +1,14 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "fentanyl:poppy_seeds"
+    }
+  ],
+  "processingTime": 50,
+  "results": [
+    {
+      "item": "fentanyl:crushed_poppy_seeds"
+    }
+  ]
+}

@@ -24,19 +24,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("  i")
                 .pattern(" g ")
                 .pattern("g  ")
-                .input('i', Items.IRON_INGOT)
+                .input('i', Items.IRON_NUGGET)
                 .input('g', Items.GLASS)
-                .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+                .criterion(hasItem(Items.IRON_NUGGET), conditionsFromItem(Items.IRON_NUGGET))
                 .criterion(hasItem(Items.GLASS), conditionsFromItem(Items.GLASS))
                 .offerTo(exporter, Identifier.of(Fentanyl.MOD_ID, getRecipeName(ModItems.SYRINGE)));
-
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.FENTANYL_BUCKET, 1)
-                .input(Items.WATER_BUCKET)
-                .input(ModItems.FENTANYL_POWDER)
-                .criterion(hasItem(Items.WATER_BUCKET), conditionsFromItem(Items.WATER_BUCKET))
-                .criterion(hasItem(ModItems.FENTANYL_POWDER), conditionsFromItem(ModItems.FENTANYL_POWDER))
-                .offerTo(exporter, Identifier.of(Fentanyl.MOD_ID, getRecipeName(ModItems.FENTANYL_BUCKET)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.POPPY_SEEDS, 2)
                 .input(Items.POPPY)

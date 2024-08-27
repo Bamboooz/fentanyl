@@ -26,6 +26,6 @@ public class BrokenSyringe extends AbstractSyringe {
 
     @Override
     public TypedActionResult<ItemStack> useOnFluid(World world, BlockState state, BlockPos pos, PlayerEntity user, ItemStack stack) {
-        return null;
+        return TypedActionResult.pass(stack);
     }
 }

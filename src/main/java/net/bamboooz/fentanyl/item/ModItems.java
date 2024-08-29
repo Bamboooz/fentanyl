@@ -2,6 +2,7 @@ package net.bamboooz.fentanyl.item;
 
 import net.bamboooz.fentanyl.Fentanyl;
 import net.bamboooz.fentanyl.fluid.ModFluids;
+import net.bamboooz.fentanyl.item.armor.FiendArmorItem;
 import net.bamboooz.fentanyl.item.drug.FentanylPills;
 import net.bamboooz.fentanyl.item.drug.FentanylPowder;
 import net.bamboooz.fentanyl.item.drug.Tar;
@@ -9,6 +10,7 @@ import net.bamboooz.fentanyl.item.syringe.BrokenSyringe;
 import net.bamboooz.fentanyl.item.syringe.FentanylSyringe;
 import net.bamboooz.fentanyl.item.syringe.NaloxoneSyringe;
 import net.bamboooz.fentanyl.item.syringe.Syringe;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.BucketItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
@@ -31,6 +33,8 @@ public class ModItems {
     public static final Item POPPY_SEEDS = registerItem("poppy_seeds", new Item(new Item.Settings()));
     public static final Item CRUSHED_POPPY_SEEDS = registerItem("crushed_poppy_seeds", new Item(new Item.Settings()));
     public static final Item TAR = registerItem("tar", new Tar(new Item.Settings()));
+
+    public static final Item FIEND_HAT = registerItem("fiend_hat", new FiendArmorItem(ModArmorMaterials.FIEND, ArmorItem.Type.HELMET, new Item.Settings()));
 
     public static final Item ADVANCEMENT_FENT_FRIDAY = registerItem("advancement_fent_friday", new Item(new Item.Settings()));
     public static final Item ADVANCEMENT_FENT_OVERDOSE = registerItem("advancement_fent_overdose", new Item(new Item.Settings()));

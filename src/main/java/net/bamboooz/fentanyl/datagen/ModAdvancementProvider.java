@@ -58,22 +58,19 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
 
         Advancement.Builder.create().parent(fentanylAdvancement)
                 .display(
-                        ModItems.ADVANCEMENT_FENT_FRIDAY,
-                        Text.literal("Fent Friday"),
-                        Text.literal("Get fentanyl into your system"),
+                        ModItems.FIEND_HAT,
+                        Text.literal("King of the fent"),
+                        Text.literal("Get your hands on the fiend hat"),
                         Identifier.of(Fentanyl.MOD_ID, "textures/gui/advancements.png"),
-                        AdvancementFrame.TASK,
+                        AdvancementFrame.CHALLENGE,
                         true,
                         true,
                         false
                 )
-                .criterion("ingest_fentanyl", EffectsChangedCriterion.Conditions.create(
-                        EntityEffectPredicate.create()
-                                .withEffect(ModEffects.FENTANYL)
-                ))
-                .build(consumer, Fentanyl.MOD_ID + "/ingest_fentanyl");
+                .criterion("obtain_fiend_hat", InventoryChangedCriterion.Conditions.items(ModItems.FIEND_HAT))
+                .build(consumer, Fentanyl.MOD_ID + "/obtain_fiend_hat");
 
-        Advancement.Builder.create().parent(fentanylAdvancement)
+        Advancement fentanylOverdoseAdvancement = Advancement.Builder.create().parent(fentanylAdvancement)
                 .display(
                         ModItems.ADVANCEMENT_FENT_OVERDOSE,
                         Text.literal("I saw him fent"),
@@ -90,11 +87,11 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                 ))
                 .build(consumer, Fentanyl.MOD_ID + "/overdose_on_fentanyl");
 
-        Advancement.Builder.create().parent(fentanylAdvancement)
+        Advancement.Builder.create().parent(fentanylOverdoseAdvancement)
                 .display(
                         ModItems.NALOXONE_SYRINGE,
                         Text.literal("Party Pooper"),
-                        Text.literal("Inject someones ass with naloxone"),
+                        Text.literal("Inject someone with naloxone"),
                         Identifier.of(Fentanyl.MOD_ID, "textures/gui/advancements.png"),
                         AdvancementFrame.TASK,
                         true,
@@ -103,5 +100,22 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                 )
                 .criterion("use_naloxone", new ImpossibleCriterion.Conditions())
                 .build(consumer, Fentanyl.MOD_ID + "/use_naloxone");
+
+        Advancement.Builder.create().parent(fentanylAdvancement)
+                .display(
+                        ModItems.ADVANCEMENT_FENT_FRIDAY,
+                        Text.literal("Fent Friday"),
+                        Text.literal("Get fentanyl into your system"),
+                        Identifier.of(Fentanyl.MOD_ID, "textures/gui/advancements.png"),
+                        AdvancementFrame.TASK,
+                        true,
+                        true,
+                        false
+                )
+                .criterion("ingest_fentanyl", EffectsChangedCriterion.Conditions.create(
+                        EntityEffectPredicate.create()
+                                .withEffect(ModEffects.FENTANYL)
+                ))
+                .build(consumer, Fentanyl.MOD_ID + "/ingest_fentanyl");
     }
 }

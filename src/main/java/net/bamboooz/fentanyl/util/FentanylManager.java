@@ -1,8 +1,11 @@
 package net.bamboooz.fentanyl.util;
 
 import net.bamboooz.fentanyl.effect.ModEffects;
+import net.bamboooz.fentanyl.item.ModItems;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.item.ItemStack;
 
 public class FentanylManager {
     public static final int FENTANYL_LEVEL_TIME = 12000;
@@ -33,10 +36,16 @@ public class FentanylManager {
         }
     }
 
+    public static boolean isImmune(LivingEntity entity) {
+        ItemStack helmet = entity.getEquippedStack(EquipmentSlot.HEAD);
+
+        return helmet.getItem() == ModItems.FIEND_HAT;
+    }
+
     public static boolean isCooked(LivingEntity entity) {
         StatusEffectInstance effect = entity.getStatusEffect(ModEffects.FENTANYL);
 
-        if (effect == null) {
+        if (effect == null || isImmune(entity)) {
             return false;
         }
 

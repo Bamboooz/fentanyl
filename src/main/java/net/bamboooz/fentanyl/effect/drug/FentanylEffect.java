@@ -1,6 +1,7 @@
 package net.bamboooz.fentanyl.effect.drug;
 
 import net.bamboooz.fentanyl.entity.damage.ModDamageTypes;
+import net.bamboooz.fentanyl.util.FentanylManager;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
@@ -18,19 +19,16 @@ public class FentanylEffect extends StatusEffect {
         StatusEffectInstance nausea = new StatusEffectInstance(StatusEffects.NAUSEA, 100, 0, true, false, false);
         StatusEffectInstance slowness = new StatusEffectInstance(StatusEffects.SLOWNESS, 100, 2, true, false, false);
 
-        switch (amplifier) {
-            case 0:
-                entity.addStatusEffect(regeneration);
-                break;
-            case 1:
-                entity.addStatusEffect(nausea);
-                entity.addStatusEffect(slowness);
-                break;
-            default:
-                entity.addStatusEffect(nausea);
-                entity.addStatusEffect(slowness);
-                entity.damage(ModDamageTypes.of(entity.getWorld(), ModDamageTypes.FENTANYL_OD), 1);
-                break;
+        if (FentanylManager.isImmune(entity) || amplifier == 0) {
+            entity.addStatusEffect(regeneration);
+            return;
+        }
+
+        entity.addStatusEffect(nausea);
+        entity.addStatusEffect(slowness);
+
+        if (amplifier > 1) {
+            entity.damage(ModDamageTypes.of(entity.getWorld(), ModDamageTypes.FENTANYL_OD), 1);
         }
     }
 

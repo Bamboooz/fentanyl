@@ -11,7 +11,7 @@ public class ModCustomTrades {
     public static void registerCustomTrades() {
         TradeOfferHelper.registerVillagerOffers(ModVillagers.FIEND, 1,
                 factories -> factories.add((entity, random) -> new TradeOffer(
-                        new ItemStack(Items.EMERALD, 1),
+                        new ItemStack(Items.EMERALD, 2),
                         new ItemStack(ModItems.SYRINGE, 1),
                         10, 5, 0.05f)));
 
@@ -20,17 +20,17 @@ public class ModCustomTrades {
                     factories.add((entity, random) -> new TradeOffer(
                             new ItemStack(Items.EMERALD, 6),
                             new ItemStack(ModItems.FENTANYL_SYRINGE, 1),
-                            2, 10, 0.075f));
+                            2, 16, 0.075f));
 
                     factories.add((entity, random) -> new TradeOffer(
                             new ItemStack(Items.EMERALD, 12),
                             new ItemStack(ModItems.FENTANYL_POWDER, 1),
-                            2, 15, 0.1f));
+                            2, 32, 0.1f));
 
                     factories.add((entity, random) -> new TradeOffer(
                             new ItemStack(Items.EMERALD, 12),
                             new ItemStack(ModItems.FENTANYL_PILLS, 1),
-                            2, 15, 0.1f));
+                            2, 32, 0.1f));
                 });
 
         Fentanyl.LOGGER.info("Registering mod trades for " + Fentanyl.MOD_ID);

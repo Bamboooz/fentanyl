@@ -1,0 +1,40 @@
+{
+  "parent": "minecraft:fentanyl/obtain_fentanyl",
+  "criteria": {
+    "obtain_fiend_hat": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "fentanyl:fiend_hat"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "fentanyl:textures/gui/advancements.png",
+    "description": {
+      "text": "Get your hands on the fiend hat"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "fentanyl:fiend_hat",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "King of the fent"
+    }
+  },
+  "requirements": [
+    [
+      "obtain_fiend_hat"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -20,6 +20,18 @@ repositories {
 	maven { url = "https://maven.jamieswhiteshirt.com/libs-release" } // Reach Entity Attributes
 	maven { url = "https://jitpack.io/" } // Mixin Extras, Fabric ASM
 	maven { url = "https://maven.tterrag.com/" } // Flywheel
+	maven {
+		name = "GeckoLib"
+		url = "https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/"
+		content {
+			includeGroupByRegex("software\\.bernie.*")
+			includeGroup("com.eliotlash.mclib")
+		}
+	} // GeckoLib
+	maven {
+		name = "KosmX's maven"
+		url = "https://maven.kosmx.dev/"
+	} // Player animator
 }
 
 dependencies {
@@ -33,6 +45,13 @@ dependencies {
 
 	// Create - dependencies are added transitively
 	modImplementation("com.simibubi.create:create-fabric-${project.minecraft_version}:${project.create_version}")
+
+	// GeckoLib
+	modImplementation("software.bernie.geckolib:geckolib-fabric-${project.minecraft_version}:${project.geckolib_version}")
+	implementation("com.eliotlash.mclib:mclib:20")
+
+	// Player Animator
+	modImplementation("dev.kosmx.player-anim:player-animation-lib-fabric:${project.player_animator}")
 
 	// Development QOL
 	modLocalRuntime("com.terraformersmc:modmenu:${project.modmenu_version}")

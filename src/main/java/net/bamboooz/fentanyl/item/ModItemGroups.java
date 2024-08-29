@@ -27,6 +27,7 @@ public class ModItemGroups {
                         entries.add(ModItems.FENTANYL_BUCKET);
                         entries.add(ModItems.NALOXONE_SYRINGE);
                         entries.add(ModItems.NALOXONE_BUCKET);
+                        entries.add(ModItems.FIEND_HAT);
                     }).build()
     );
 

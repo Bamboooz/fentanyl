@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:fentanyl/obtain_fentanyl",
+  "parent": "minecraft:fentanyl/overdose_on_fentanyl",
   "criteria": {
     "use_naloxone": {
       "trigger": "minecraft:impossible"
@@ -9,7 +9,7 @@
     "announce_to_chat": true,
     "background": "fentanyl:textures/gui/advancements.png",
     "description": {
-      "text": "Inject someones ass with naloxone"
+      "text": "Inject someone with naloxone"
     },
     "frame": "task",
     "hidden": false,

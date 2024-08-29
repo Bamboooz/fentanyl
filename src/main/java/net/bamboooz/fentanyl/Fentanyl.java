@@ -7,10 +7,11 @@ import net.bamboooz.fentanyl.entity.villager.ModVillagers;
 import net.bamboooz.fentanyl.fluid.ModFluids;
 import net.bamboooz.fentanyl.item.ModItemGroups;
 import net.bamboooz.fentanyl.entity.villager.ModCustomTrades;
+import net.bamboooz.fentanyl.loot.ModLootConditions;
 import net.bamboooz.fentanyl.util.ModTags;
 import net.bamboooz.fentanyl.item.ModItems;
 import net.bamboooz.fentanyl.sound.ModSounds;
-import net.bamboooz.fentanyl.util.ModifyLootTables;
+import net.bamboooz.fentanyl.loot.ModifyLootTables;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -33,6 +34,7 @@ public class Fentanyl implements ModInitializer {
 		ModDamageTypes.registerDamageTypes();
 		ModSounds.registerSounds();
 
+		ModLootConditions.registerLootConditions();
 		ModifyLootTables.modifyLootTables();
 
 		ModVillagers.registerVillagers();

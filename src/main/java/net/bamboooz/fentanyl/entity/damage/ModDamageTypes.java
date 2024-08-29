@@ -1,6 +1,7 @@
 package net.bamboooz.fentanyl.entity.damage;
 
 import net.bamboooz.fentanyl.Fentanyl;
+import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.damage.DamageType;

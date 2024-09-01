@@ -1,0 +1,18 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "fentanyl:syringe"
+    },
+    {
+      "amount": 40500,
+      "fluid": "fentanyl:fentanyl_still",
+      "nbt": {}
+    }
+  ],
+  "results": [
+    {
+      "item": "fentanyl:fentanyl_syringe"
+    }
+  ]
+}

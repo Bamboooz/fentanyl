@@ -5,12 +5,13 @@
   "mixins": [
     "entity.LivingEntityMixin",
     "entity.PlayerEntityMixin",
-    "entity.ServerPlayerEntityMixin"
+    "server.ServerPlayerEntityMixin",
+    "entity.damage.DamageSourceMixin"
   ],
   "injectors": {
     "defaultRequire": 1
   },
   "client": [
-    "model.BipedEntityModelMixin"
+
   ]
 }

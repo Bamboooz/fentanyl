@@ -1,4 +1,30 @@
 {
+  "advancement.fentanyl.root.title": "Create: Fentanyl",
+  "advancement.fentanyl.root.description": "Let there be fent",
+  "advancement.fentanyl.obtain_precursor_to_fentanyl.title": "Baby steps",
+  "advancement.fentanyl.obtain_precursor_to_fentanyl.description": "Obtain the precursor to fentanyl",
+  "advancement.fentanyl.obtain_fentanyl.title": "Fentanyl",
+  "advancement.fentanyl.obtain_fentanyl.description": "Obtain fentanyl in any form for the first time",
+  "advancement.fentanyl.obtain_fiend_hat.title": "King of the fent",
+  "advancement.fentanyl.obtain_fiend_hat.description": "Become resistant to fentanyl",
+  "advancement.fentanyl.overdose_on_fentanyl.title": "I saw him fent",
+  "advancement.fentanyl.overdose_on_fentanyl.description": "Overdose on fentanyl",
+  "advancement.fentanyl.treat_an_overdose.title": "Party Pooper",
+  "advancement.fentanyl.treat_an_overdose.description": "Treat your overdose with naloxone",
+  "advancement.fentanyl.ingest_fentanyl.title": "Fent Friday",
+  "advancement.fentanyl.ingest_fentanyl.description": "Get fentanyl into your system",
+
+  "block.fentanyl.fentanyl_block": "Fentanyl Block",
+  "block.fentanyl.syringe_block": "Syringe Block",
+  "block.fentanyl.fentanyl_syringe_block": "Fentanyl Syringe Block",
+  "block.fentanyl.naloxone_syringe_block": "Naloxone Syringe Block",
+  "block.fentanyl.fentanyl_fluid_block": "Liquid Fentanyl",
+  "block.fentanyl.naloxone_fluid_block": "Liquid Naloxone",
+
+  "death.attack.pricking": "%1$s pricked himself to death",
+  "death.attack.pricking.player": "%1$s was pricked to death by %2$s",
+  "death.attack.fentanyl_od": "%1$s overdosed on fentanyl",
+
   "itemgroup.fentanyl": "Create: Fentanyl",
 
   "item.fentanyl.syringe": "Syringe",
@@ -13,19 +39,16 @@
   "item.fentanyl.crushed_poppy_seeds":  "Crushed Poppy Seeds",
   "item.fentanyl.tar": "Tar",
   "item.fentanyl.fiend_hat": "Fiend Hat",
-
-  "block.fentanyl.fentanyl_fluid_block": "Liquid Fentanyl",
-  "block.fentanyl.naloxone_fluid_block": "Liquid Naloxone",
-
-  "entity.minecraft.villager.fiend": "Fiend",
+  "item.fentanyl.skull": "Skull",
 
   "effect.fentanyl.fentanyl": "Fentanyl",
+  "effect.fentanyl.naloxone": "Naloxone",
+
+  "entity.minecraft.villager.fiend": "Fiend",
 
   "sounds.fentanyl.prick": "Syringe Prick",
   "sounds.fentanyl.snort": "Snorting",
   "sounds.fentanyl.mandeville": "Mandeville (SCP-420-J) - Kevin McLeod",
 
-  "death.attack.pricking": "%1$s pricked himself to death",
-  "death.attack.pricking.player": "%1$s was pricked to death by %2$s",
-  "death.attack.fentanyl_od": "%1$s overdosed on fentanyl"
+  "tooltip.fentanyl.skull": "You probably don't want to ingest this"
 }

@@ -1,7 +1,8 @@
 package net.bamboooz.fentanyl.client;
 
-import net.bamboooz.fentanyl.fluid.ModFluids;
-import net.bamboooz.fentanyl.util.FentanylManager;
+import net.bamboooz.fentanyl.server.fluid.ModFluids;
+import net.bamboooz.fentanyl.server.util.FentanylManager;
+import net.bamboooz.fentanyl.server.util.NaloxoneManager;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -24,7 +25,7 @@ public class ModClient implements ClientModInitializer {
         registerFluid(ModFluids.FENTANYL_STILL, FentanylManager.FENTANYL_TINT);
         registerFluid(ModFluids.FENTANYL_FLOWING, FentanylManager.FENTANYL_TINT);
 
-        registerFluid(ModFluids.NALOXONE_STILL, FentanylManager.NALOXONE_TINT);
-        registerFluid(ModFluids.NALOXONE_FLOWING, FentanylManager.NALOXONE_TINT);
+        registerFluid(ModFluids.NALOXONE_STILL, NaloxoneManager.NALOXONE_TINT);
+        registerFluid(ModFluids.NALOXONE_FLOWING, NaloxoneManager.NALOXONE_TINT);
     }
 }

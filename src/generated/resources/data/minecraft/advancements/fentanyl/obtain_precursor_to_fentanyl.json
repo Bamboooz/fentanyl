@@ -1,0 +1,39 @@
+{
+  "parent": "minecraft:fentanyl/root",
+  "criteria": {
+    "obtain_precursor_to_fentanyl": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "fentanyl:poppy_seeds"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "fentanyl:textures/gui/advancements.png",
+    "description": {
+      "translate": "advancement.fentanyl.obtain_precursor_to_fentanyl.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "fentanyl:poppy_seeds"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.fentanyl.obtain_precursor_to_fentanyl.title"
+    }
+  },
+  "requirements": [
+    [
+      "obtain_precursor_to_fentanyl"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

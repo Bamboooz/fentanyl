@@ -53,8 +53,8 @@ dependencies {
 	// Player Animator
 	modImplementation("dev.kosmx.player-anim:player-animation-lib-fabric:${project.player_animator}")
 
-	// Development QOL
-	modLocalRuntime("com.terraformersmc:modmenu:${project.modmenu_version}")
+	// ModMenu
+	modImplementation("com.terraformersmc:modmenu:${project.modmenu_version}")
 
 	// EMI
 	modCompileOnly("dev.emi:emi-fabric:$emi_version:api") { transitive = false }

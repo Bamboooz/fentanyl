@@ -1,10 +1,10 @@
 package net.bamboooz.fentanyl.mixin.entity;
 
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
-import net.bamboooz.fentanyl.effect.ModEffects;
-import net.bamboooz.fentanyl.sound.custom.MandevilleSound;
-import net.bamboooz.fentanyl.sound.ModSounds;
-import net.bamboooz.fentanyl.util.FentanylManager;
+import net.bamboooz.fentanyl.server.effect.ModEffects;
+import net.bamboooz.fentanyl.client.sound.MandevilleSound;
+import net.bamboooz.fentanyl.server.sound.ModSounds;
+import net.bamboooz.fentanyl.server.util.FentanylManager;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.sound.SoundInstance;
 import net.minecraft.client.sound.SoundManager;

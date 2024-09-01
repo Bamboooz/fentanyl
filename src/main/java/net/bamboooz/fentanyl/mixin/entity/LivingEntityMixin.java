@@ -1,8 +1,8 @@
 package net.bamboooz.fentanyl.mixin.entity;
 
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
-import net.bamboooz.fentanyl.effect.ModEffects;
-import net.bamboooz.fentanyl.util.FentanylManager;
+import net.bamboooz.fentanyl.server.effect.ModEffects;
+import net.bamboooz.fentanyl.server.util.FentanylManager;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import org.spongepowered.asm.mixin.Mixin;

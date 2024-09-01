@@ -1,0 +1,14 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "fentanyl:fentanyl_pills"
+    }
+  ],
+  "processingTime": 50,
+  "results": [
+    {
+      "item": "fentanyl:fentanyl_powder"
+    }
+  ]
+}

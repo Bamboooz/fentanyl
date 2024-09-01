@@ -1,0 +1,40 @@
+{
+  "parent": "minecraft:fentanyl/overdose_on_fentanyl",
+  "criteria": {
+    "treat_an_overdose": {
+      "conditions": {
+        "effects": {
+          "fentanyl:fentanyl": {
+            "amplifier": {
+              "min": 2
+            }
+          },
+          "fentanyl:naloxone": {}
+        }
+      },
+      "trigger": "minecraft:effects_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "fentanyl:textures/gui/advancements.png",
+    "description": {
+      "translate": "advancement.fentanyl.treat_an_overdose.description"
+    },
+    "frame": "goal",
+    "hidden": false,
+    "icon": {
+      "item": "fentanyl:naloxone_syringe"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.fentanyl.treat_an_overdose.title"
+    }
+  },
+  "requirements": [
+    [
+      "treat_an_overdose"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

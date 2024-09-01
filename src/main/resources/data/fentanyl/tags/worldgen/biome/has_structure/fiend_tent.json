@@ -1,12 +1,8 @@
 {
   "replace": false,
   "values": [
+    "minecraft:meadow",
     "minecraft:plains",
-    "minecraft:sunflower_plains",
-    "minecraft:savanna",
-    "minecraft:savanna_plateau",
-    "minecraft:desert",
-    "minecraft:beach",
-    "minecraft:meadow"
+    "minecraft:sunflower_plains"
   ]
 }

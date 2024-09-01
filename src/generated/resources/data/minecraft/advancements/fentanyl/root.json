@@ -13,7 +13,7 @@
     "announce_to_chat": false,
     "background": "fentanyl:textures/gui/advancements.png",
     "description": {
-      "text": "Let there be fent"
+      "translate": "advancement.fentanyl.root.description"
     },
     "frame": "task",
     "hidden": true,
@@ -22,7 +22,7 @@
     },
     "show_toast": false,
     "title": {
-      "text": "Create: Fentanyl"
+      "translate": "advancement.fentanyl.root.title"
     }
   },
   "requirements": [

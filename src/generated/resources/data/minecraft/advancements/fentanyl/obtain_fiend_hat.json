@@ -18,7 +18,7 @@
     "announce_to_chat": true,
     "background": "fentanyl:textures/gui/advancements.png",
     "description": {
-      "text": "Get your hands on the fiend hat"
+      "translate": "advancement.fentanyl.obtain_fiend_hat.description"
     },
     "frame": "challenge",
     "hidden": false,
@@ -28,7 +28,7 @@
     },
     "show_toast": true,
     "title": {
-      "text": "King of the fent"
+      "translate": "advancement.fentanyl.obtain_fiend_hat.title"
     }
   },
   "requirements": [

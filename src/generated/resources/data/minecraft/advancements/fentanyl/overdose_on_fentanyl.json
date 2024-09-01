@@ -18,16 +18,16 @@
     "announce_to_chat": true,
     "background": "fentanyl:textures/gui/advancements.png",
     "description": {
-      "text": "Overdose on fentanyl"
+      "translate": "advancement.fentanyl.overdose_on_fentanyl.description"
     },
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "fentanyl:advancement_fent_overdose"
+      "item": "fentanyl:skull"
     },
     "show_toast": true,
     "title": {
-      "text": "I saw him fent"
+      "translate": "advancement.fentanyl.overdose_on_fentanyl.title"
     }
   },
   "requirements": [

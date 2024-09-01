@@ -14,16 +14,16 @@
     "announce_to_chat": true,
     "background": "fentanyl:textures/gui/advancements.png",
     "description": {
-      "text": "Get fentanyl into your system"
+      "translate": "advancement.fentanyl.ingest_fentanyl.description"
     },
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "fentanyl:advancement_fent_friday"
+      "item": "minecraft:firework_rocket"
     },
     "show_toast": true,
     "title": {
-      "text": "Fent Friday"
+      "translate": "advancement.fentanyl.ingest_fentanyl.title"
     }
   },
   "requirements": [

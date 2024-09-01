@@ -1,0 +1,15 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "fentanyl:fentanyl_block"
+    }
+  ],
+  "processingTime": 100,
+  "results": [
+    {
+      "count": 9,
+      "item": "fentanyl:fentanyl_powder"
+    }
+  ]
+}

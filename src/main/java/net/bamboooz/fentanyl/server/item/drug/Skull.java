@@ -17,7 +17,7 @@ public class Skull extends AbstractDrug {
 
     @Override
     public int fentanylUnits() {
-        return 2147483647;
+        return 1728000;
     }
 
     @Override

@@ -18,6 +18,6 @@ public class FiendArmorModel extends GeoModel<FiendArmorItem> {
 
     @Override
     public Identifier getAnimationResource(FiendArmorItem animatable) {
-        return Identifier.of(Fentanyl.MOD_ID, "player_animation/fiend_armor.animation.json");
+        return Identifier.of(Fentanyl.MOD_ID, "animations/fiend_armor.animation.json");
     }
 }

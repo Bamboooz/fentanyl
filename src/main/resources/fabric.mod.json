@@ -8,6 +8,7 @@
 		"Bamboooz"
 	],
 	"contact": {
+		"homepage": "https://github.com/Bamboooz/fentanyl",
 		"issues": "https://github.com/Bamboooz/fentanyl/issues",
 		"sources": "https://github.com/Bamboooz/fentanyl"
 	},
@@ -46,7 +47,6 @@
 		"java": ">=17",
 		"create": "0.5.1-f-build.1417+mc1.20.1",
 		"geckolib": "4.4.7",
-		"player-animator": "1.0.2-rc1+1.20",
 		"fabric-api": "*"
 	}
 }

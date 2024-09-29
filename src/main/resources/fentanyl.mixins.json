@@ -5,8 +5,8 @@
   "mixins": [
     "entity.LivingEntityMixin",
     "entity.PlayerEntityMixin",
-    "server.ServerPlayerEntityMixin",
-    "entity.damage.DamageSourceMixin"
+    "entity.damage.DamageSourceMixin",
+    "server.ServerPlayerEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1
